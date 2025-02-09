@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Příklad Flexboxu</title>
+  <style>
+    /* Flex kontejner – experimentujte s vlastnostmi níže */
+    .flex-container {
+      display: flex;
+      /* flex-direction určuje směr hlavní osy:
+         row (výchozí) = položky vedle sebe,
+         column = položky pod sebou */
+      flex-direction: row; /* Zkuste změnit na column */
+      
+      /* justify-content řídí zarovnání položek podél hlavní osy:
+         flex-start, flex-end, center, space-between, space-around, space-evenly */
+      justify-content: center; /* Vyzkoušejte i další hodnoty */
+      
+      /* align-items řídí zarovnání podél křížové osy:
+         flex-start, flex-end, center, stretch, baseline */
+      align-items: center; /* Vyzkoušejte např. flex-start nebo stretch */
+      
+      /* flex-wrap umožňuje zalamování položek, když se nevejdou do jednoho řádku */
+      flex-wrap: wrap; /* Zkuste zakomentovat nebo změnit na nowrap */
+      
+      height: 80vh; /* Výška kontejneru, aby bylo vidět centrování */
+      background-color: #f0f0f0;
+      border: 2px dashed #ccc;
+      padding: 20px;
+    }
+
+    /* Styl pro jednotlivé flex položky */
+    .box {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      font-size: 1.2em;
+      border-radius: 5px;
+      /* Zkrácená vlastnost flex: flex-grow, flex-shrink, flex-basis */
+      flex: 1 1 150px; /* Výchozí velikost 150px, růst a smršťování povoleno */
+    }
+  </style>
+</head>
+<body>
+  <h1>Příklad Flexboxu pro studenty</h1>
+  <p>
+    Tento příklad demonstruje základní použití flexboxu. Zkuste upravit CSS vlastnosti 
+    <code>flex-direction</code>, <code>justify-content</code> a <code>align-items</code> v třídě 
+    <code>.flex-container</code> a sledujte, jak se mění rozložení boxů.
+  </p>
+  <div class="flex-container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+  </div>
+  <p>
+    Experimentujte také s hodnotou <code>flex</code> v třídě <code>.box</code>, abyste zjistili, jak se položky chovají při různých nastaveních.
+  </p>
+</body>
+</html>
